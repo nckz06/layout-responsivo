@@ -1,0 +1,337 @@
+/* --------------- IMPORTS --------------- */
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+
+
+/* --------------- MOBILE FIRST DESIGN --------------- */
+
+/* CONTEÚDO DO CABEÇALHO */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 50vh;
+    background-image: url('../images/mobile-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.header-content h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+    align-self: flex-start;
+}
+
+.header-content p {
+    /* font-family: 'Open Sans', sans-serif; */
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.header-content .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button-container button {
+    font-size: 1rem;
+    font-weight: 400;
+    border: none;
+    border-radius: 28px;
+    width: 23.8rem;
+    padding: 1rem;
+}
+
+.button-container .windows-button {
+    color: #23272A;
+    background-color: #fff;
+}
+
+.button-container .browser-button {
+    color: #fff;
+    background-color: #23272A;
+}
+
+.windows-button:hover,
+.browser-button:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main img {
+    max-width: 100%;
+}
+
+main h2 {
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+main p {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.content-1,
+.content-2,
+.content-3,
+.content-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1.5rem;
+}
+
+.content-1__text,
+.content-2__text,
+.content-3__text,
+.content-4__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.content-2,
+.content-4 {
+    background-color: #F6F6F6;
+}
+
+
+/* RODAPÉ DA PÁGINA */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    background-color: #23272A;
+}
+
+
+
+/* --------------- DESKTOP TEMPLATE --------------- */
+@media screen and (min-width: 790px) and (max-width: 1064px) {
+    header {
+        background-image: url('../images/descktop-background.png');
+        height: 75vh;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 45rem;
+    }
+
+    .header-content h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        align-self: center;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .header-content .button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    main section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100%;
+    }
+
+    main section:nth-child(even) {
+        background-color: #F6F6F6;
+    }
+
+    .content-1,
+    .content-2,
+    .content-3,
+    .content-4 {
+        width: 70vw;
+        height: 24.825rem;    
+    }
+
+    .content-1,
+    .content-3 {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .content-1 h2,
+    .content-2 h2,
+    .content-3 h2,
+    .content-4 h2 {
+        font-size: 2rem;
+    }
+
+    .content-2 {
+        display: grid;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            'texto image'
+        ;
+    }
+
+    .content-2 img {
+        grid-area: image;
+    }
+
+    .content-2 div {
+        grid-area: texto;
+    }
+
+    .content-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1064px) {
+    header {
+        background-image: url('../images/descktop-background.png');
+        height: 75vh;
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 45rem;
+    }
+
+    .header-content h1 {
+        font-size: 3.5rem;
+        text-align: center;
+        align-self: center;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .header-content .button-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    main section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100%;
+    }
+
+    main section:nth-child(even) {
+        background-color: #F6F6F6;
+    }
+
+    .content-1,
+    .content-2,
+    .content-3,
+    .content-4 {
+        width: 70vw;
+        height: 24.825rem;    
+    }
+
+    .content-1,
+    .content-3 {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .content-1 h2,
+    .content-2 h2,
+    .content-3 h2,
+    .content-4 h2 {
+        font-size: 2rem;
+    }
+
+    .content-2 {
+        display: grid;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas: 
+            'texto image'
+        ;
+    }
+
+    .content-2 img {
+        grid-area: image;
+    }
+
+    .content-2 div {
+        grid-area: texto;
+    }
+
+    .content-4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        text-align: center;
+    }
+}
